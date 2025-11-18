@@ -5,9 +5,20 @@ import { Regions, Economy } from './components/Sections'
 import Progress from './components/Progress'
 import NewsStatus from './components/NewsStatus'
 
+function Ambient() {
+  return (
+    <>
+      <div className="starfield"></div>
+      <div className="aurora"></div>
+      <div className="grid-overlay"></div>
+    </>
+  )
+}
+
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 relative">
+    <div className="min-h-screen bg-slate-950 text-slate-100 relative vignette">
+      <Ambient />
       <Navbar />
       <main className="pt-20">
         <Hero />
@@ -22,7 +33,6 @@ function App() {
           </div>
         </footer>
       </main>
-      <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(60vw_60vw_at_50%_-10%,rgba(16,185,129,0.08),transparent)]" />
     </div>
   )
 }
